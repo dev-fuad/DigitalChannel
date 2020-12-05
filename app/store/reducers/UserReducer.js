@@ -9,7 +9,7 @@
 import type {UserState, Action} from '../../types/store';
 
 const INITIAL_STATE = {
-  name: '???',
+  name: '',
 };
 
 const userReducer = (
