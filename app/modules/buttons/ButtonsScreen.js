@@ -8,13 +8,17 @@
 
 import React from 'react';
 import {Text, View} from 'react-native';
+import {Greeting} from '../../components';
 import styles from './ButtonsScreenStyles';
 
 const ButtonsScreen: () => React$Node = () => {
   return (
-    <View style={styles.container}>
-      <Text>ButtonsScreen</Text>
-    </View>
+    <>
+      <Greeting />
+      <View style={styles.container}>
+        <Text>ButtonsScreen</Text>
+      </View>
+    </>
   );
 };
 

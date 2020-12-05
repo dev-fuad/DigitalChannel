@@ -10,6 +10,7 @@ import {useNavigation} from '@react-navigation/native';
 import React, {useEffect} from 'react';
 import {Button, View} from 'react-native';
 import {useSelector} from 'react-redux';
+import {Greeting} from '../../components';
 import {Screens} from '../../navigation';
 import styles from './HomeScreenStyles';
 
@@ -32,13 +33,16 @@ const HomeScreen: () => React$Node = () => {
   // }, [navigate]);
 
   return (
-    <View style={styles.container}>
-      <Button title="Change Name" onPress={() => navigate(Screens.welcome)} />
-      <Button
-        title="View Buttons Showcase"
-        onPress={() => navigate(Screens.buttons)}
-      />
-    </View>
+    <>
+      <Greeting />
+      <View style={styles.container}>
+        <Button title="Change Name" onPress={() => navigate(Screens.welcome)} />
+        <Button
+          title="View Buttons Showcase"
+          onPress={() => navigate(Screens.buttons)}
+        />
+      </View>
+    </>
   );
 };
 

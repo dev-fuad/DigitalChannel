@@ -8,6 +8,6 @@
 
 import type {UserAction} from '../../types/store';
 
-export const updateUser = (name: string): UserAction => {
+export const updateName = (name: string): UserAction => {
   return {type: 'UPDATE_NAME', payload: name};
 };
