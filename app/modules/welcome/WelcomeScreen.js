@@ -24,6 +24,7 @@ const WelcomeScreen: () => React$Node = () => {
         <View>
           <Text style={styles.greeting}>Welcome,</Text>
           <TextInput
+            autoFocus
             style={styles.input}
             placeholder="Enter your name"
             value={name}

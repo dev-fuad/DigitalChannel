@@ -15,6 +15,7 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* DigitalChannelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* DigitalChannelTests.m */; };
+		5A537EE4257D78B60022BFEA /* DeviceCheckerModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A537EE3257D78B60022BFEA /* DeviceCheckerModule.m */; };
 		5BCCFE372A1284C50FA46413 /* libPods-DigitalChannel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD08E76D496116FD9C17AD8 /* libPods-DigitalChannel.a */; };
 		72E913DD4DB7C3838FF2CC6D /* libPods-DigitalChannel-DigitalChannelTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E750F69E28F093AB7F55FD9 /* libPods-DigitalChannel-DigitalChannelTests.a */; };
 		775F7EE74F39181116F0A696 /* libPods-DigitalChannel-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F42AF16CEB037952361452 /* libPods-DigitalChannel-tvOSTests.a */; };
@@ -54,6 +55,8 @@
 		2D02E47B1E0B4A5D006451C7 /* DigitalChannel-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DigitalChannel-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* DigitalChannel-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DigitalChannel-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F55A41846C585CD219D6C1A /* Pods-DigitalChannel-DigitalChannelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitalChannel-DigitalChannelTests.release.xcconfig"; path = "Target Support Files/Pods-DigitalChannel-DigitalChannelTests/Pods-DigitalChannel-DigitalChannelTests.release.xcconfig"; sourceTree = "<group>"; };
+		5A537ED8257D77E40022BFEA /* DeviceCheckerModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceCheckerModule.h; sourceTree = "<group>"; };
+		5A537EE3257D78B60022BFEA /* DeviceCheckerModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceCheckerModule.m; sourceTree = "<group>"; };
 		5F6311997687470834096907 /* Pods-DigitalChannel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitalChannel.debug.xcconfig"; path = "Target Support Files/Pods-DigitalChannel/Pods-DigitalChannel.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = DigitalChannel/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B6A283155E46BD8CE951457 /* Pods-DigitalChannel-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitalChannel-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-DigitalChannel-tvOS/Pods-DigitalChannel-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +135,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				5A537ED8257D77E40022BFEA /* DeviceCheckerModule.h */,
+				5A537EE3257D78B60022BFEA /* DeviceCheckerModule.m */,
 			);
 			name = DigitalChannel;
 			sourceTree = "<group>";
@@ -161,7 +166,6 @@
 				A0A9B1B4C43F8E425DBEF6E7 /* Pods-DigitalChannel-tvOSTests.debug.xcconfig */,
 				BF9BB860B8E2BC85B8EE0A12 /* Pods-DigitalChannel-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -295,6 +299,7 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						LastSwiftMigration = 1120;
+						ProvisioningStyle = Manual;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -569,6 +574,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				5A537EE4257D78B60022BFEA /* DeviceCheckerModule.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -655,7 +661,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = DigitalChannel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -664,8 +672,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.digital.channel;
 				PRODUCT_NAME = DigitalChannel;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -678,7 +687,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DigitalChannel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -686,8 +697,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.digital.channel;
 				PRODUCT_NAME = DigitalChannel;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

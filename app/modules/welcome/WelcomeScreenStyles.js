@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
     width: width * 0.6,
     height: 40,
     fontSize: 28,
+    padding: 0,
   },
 });
 

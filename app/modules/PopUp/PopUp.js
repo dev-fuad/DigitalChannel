@@ -7,13 +7,21 @@
  */
 
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Button, Text, View} from 'react-native';
+import {useNavigation, useRoute} from '@react-navigation/native';
 import styles from './PopUpStyles';
 
 const PopUp: () => React$Node = () => {
+  const {goBack} = useNavigation();
+  const {params = {}} = useRoute();
+  const {message, style} = params;
+
   return (
     <View style={styles.container}>
-      <Text>PopUp</Text>
+      <View style={styles.content}>
+        <Text style={style}>{message}</Text>
+        <Button title="OK" onPress={() => goBack()} />
+      </View>
     </View>
   );
 };

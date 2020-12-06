@@ -11,6 +11,7 @@ import React, {useEffect} from 'react';
 import {Button, View} from 'react-native';
 import {useSelector} from 'react-redux';
 import {Greeting} from '../../components';
+import {isDevice} from '../../libs/DeviceChecker';
 import {Screens} from '../../navigation';
 import styles from './HomeScreenStyles';
 
@@ -24,19 +25,21 @@ const HomeScreen: () => React$Node = () => {
     }
   }, [name, navigate]);
 
-  // TODO: Add when native module to check device is ready
-  //
-  // useEffect(() => {
-  //   if (not a real device) {
-  //     navigate(Screens.popUp);
-  //   }
-  // }, [navigate]);
+  useEffect(() => {
+    if (!isDevice()) {
+      navigate(Screens.popUp, {
+        message: 'You are not running on a real device',
+        style: styles.message,
+      });
+    }
+  }, [navigate]);
 
   return (
     <>
       <Greeting />
       <View style={styles.container}>
         <Button title="Change Name" onPress={() => navigate(Screens.welcome)} />
+        <View style={styles.spacer} />
         <Button
           title="View Buttons Showcase"
           onPress={() => navigate(Screens.buttons)}
