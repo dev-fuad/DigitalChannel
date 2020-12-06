@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WelcomeScreen should match snapshot 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "bottom": 0,
+        "flex": 1,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <View>
+      <Text
+        style={
+          Object {
+            "fontSize": 24,
+          }
+        }
+      >
+        Welcome,
+      </Text>
+      <TextInput
+        allowFontScaling={true}
+        onChangeText={[Function]}
+        placeholder="Enter your name"
+        rejectResponderTermination={true}
+        style={
+          Object {
+            "fontSize": 28,
+            "height": 40,
+            "marginLeft": 8,
+            "width": 450,
+          }
+        }
+        underlineColorAndroid="transparent"
+        value="Chris"
+      />
+    </View>
+  </View>
+</View>
+`;
